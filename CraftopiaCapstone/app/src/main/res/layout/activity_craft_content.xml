@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header">
+
+        <ImageButton
+            android:id="@+id/drawerToggle"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:src="@drawable/burgercap"
+            android:background="@color/transparent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sidetitle"/>
+
+        <ImageButton
+            android:id="@+id/notification"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:src="@drawable/notif"/>
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/search_view_bg"
+        app:queryHint="Search Here ..."
+        app:searchIcon="@drawable/searchicon"
+        android:layout_below="@+id/tolbar"/>
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/contladak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/carving"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Ladakh's Wood"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/meatbal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="250dp"
+                    android:padding="10dp"
+                    android:background="@drawable/wood1"/>
+                <ImageButton
+                    android:layout_width="200dp"
+                    android:layout_height="250dp"
+                    android:padding="10dp"
+                    android:background="@drawable/wood2"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="30dp"
+        app:menu="@menu/nav_bottom"/>
+</RelativeLayout>

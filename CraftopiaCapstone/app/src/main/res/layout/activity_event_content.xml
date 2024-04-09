@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".EventActivtiy">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header">
+
+        <ImageButton
+            android:id="@+id/drawerToggle"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:background="@color/transparent"
+            android:src="@drawable/burgercap" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/eventtitle" />
+
+        <ImageButton
+            android:id="@+id/next2"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:src="@drawable/baseline_arrow_forward_24" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/events_below">
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/imageButton"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="137dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="@color/header"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Craft day is 2-3 hours"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="215dp"
+        android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/clickhere"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Rest Day"
+        android:textColor="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/wep"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="290dp"
+        android:layout_marginEnd="22dp"
+        android:background="@drawable/wp2"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:stateListAnimator="@null"
+        android:text="WoodCraft Tutorial"
+        android:textColor="#FFFFFF"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/wep"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="187dp"
+        android:text="Sep 20 - 25"
+        android:textColor="#918787"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="146dp"
+        android:layout_marginEnd="62dp"
+        android:layout_toStartOf="@+id/imageButton"
+        android:text="SAT
+        19"
+        android:textColor="#4C4C4C"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="48dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="217dp"
+        android:layout_toStartOf="@+id/button"
+        android:text="SUN
+        20"
+        android:textColor="#4C4C4C"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="250dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="454dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="@color/header"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:stateListAnimator="@null"
+        android:text="Chapter 2"
+        android:textColor="#FFFFFF" />
+
+    <ImageButton
+        android:id="@+id/wep2"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="536dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/wp1"
+        android:elevation="0dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:stateListAnimator="@null"
+        android:text="Rest Day"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="30dp"
+        app:menu="@menu/nav_bottom"/>
+
+</RelativeLayout>

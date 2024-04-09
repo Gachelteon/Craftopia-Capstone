@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/header">
+
+        <ImageButton
+            android:id="@+id/drawerToggle"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:src="@drawable/burgercap"
+            android:background="@color/transparent" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sidetitle"/>
+
+        <ImageButton
+            android:id="@+id/notification"
+            android:layout_width="55dp"
+            android:layout_height="45dp"
+            android:layout_gravity="end"
+            android:background="@color/transparent"
+            android:src="@drawable/notif"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/search_view_bg"
+        app:queryHint="Search Here ..."
+        app:searchIcon="@drawable/searchicon"
+        android:layout_below="@+id/tolbar"/>
+
+    <RelativeLayout
+        android:id="@+id/conts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/searchView"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="false"
+            android:gravity="center_horizontal"
+            android:text="Explore your passions and interests. Support
+handcrafters and their creations. Only on Craftopia." />
+
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/conts">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/embroidery"
+                        app:shapeAppearanceOverlay="@style/circular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Textile and Fabrics"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/sculpt"
+                        app:shapeAppearanceOverlay="@style/circular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Woodworking"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/paintings"
+                        app:shapeAppearanceOverlay="@style/circular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Art and Visual Creations"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:background="@drawable/headstones"
+                        app:shapeAppearanceOverlay="@style/circular"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Stonework"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navbar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:itemIconSize="30dp"
+        app:menu="@menu/nav_bottom"/>
+
+</RelativeLayout>
